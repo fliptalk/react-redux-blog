@@ -169,7 +169,8 @@ router.post('/users/signup', function(req, res, next) {
       if (err)
         throw err;
 
-      email.sendWelcomeEmail(user, req.headers.host); //send welcome email w/ verification token
+      // TODO JU : email 설정
+      // email.sendWelcomeEmail(user, req.headers.host); //send welcome email w/ verification token
 
       var token = utils.generateToken(user);
 
